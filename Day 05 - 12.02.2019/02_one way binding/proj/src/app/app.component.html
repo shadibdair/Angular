@@ -1,0 +1,17 @@
+<!-- one way binding: TS to HTML-->
+
+<p [title]="firstName">firstName: {{firstName}}</p>
+<p *ngIf="counter">counter: {{counter}}</p>
+
+<ul>
+  <li *ngFor="let h of hobbies">{{h}}</li>
+</ul>
+
+
+<img src="assets/images/{{firstName}}.jpeg"/>
+<img [src]="'assets/images/'+firstName+'.jpeg'"/>
+
+<!-- one way binding: HTML to TS-->
+<button (click)="incrementNum()">
+  click me to increment counter
+</button>

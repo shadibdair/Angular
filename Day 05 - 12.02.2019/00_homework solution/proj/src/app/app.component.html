@@ -1,0 +1,27 @@
+<h1>Movie list</h1>
+
+<!-- ol = orderd list-->
+<ul class="rolldown-list" id="myList">
+
+  <!-- li = list item -->
+  <li *ngFor="let m of movieList" (click)="changeMovie(m)">
+    {{m.movie_name}}
+  </li>
+</ul>
+
+
+<h2>selected movie: {{movieName}}</h2>
+<table border="1">
+  <tr>
+    <th>Country</th>
+    <th>Price</th>
+    <th>Date</th>
+  </tr>
+
+  <tr>
+    <td>{{countryMovie}}</td>
+    <td>{{moviePrice}}</td>
+    <td>{{movieDate}}</td>
+  </tr>
+</table>
+
