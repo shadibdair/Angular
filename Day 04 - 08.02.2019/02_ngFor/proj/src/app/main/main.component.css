@@ -1,0 +1,9 @@
+div{
+    width:40%;
+    padding: 10%; 
+    margin-left: 20%;
+    border-width: 3px;
+    border-style: solid;
+    border-color: aqua;
+    background-color: white;
+}

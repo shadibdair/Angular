@@ -1,0 +1,17 @@
+
+<div>
+    <h2>Student list (non - dynamic):</h2>
+    <ul>
+      <li>{{studentList[0]}}</li>
+      <li>{{studentList[1]}}</li>
+      <li>{{studentList[2]}}</li>
+    </ul>
+
+
+    <h2>Student list (dynamic):</h2>
+    <ul>
+      <li *ngFor="let s of studentList">
+        {{s}}
+      </li>
+    </ul>
+</div>
