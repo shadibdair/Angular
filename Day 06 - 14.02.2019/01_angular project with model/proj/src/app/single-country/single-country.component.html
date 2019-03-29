@@ -1,0 +1,39 @@
+<h2>
+  select a country:
+</h2>
+
+<select [(ngModel)]="selectedCountryName" (change)="getSelectedCountry(selectedCountryName)">
+  <option *ngFor="let c of countryList">{{c.name}}</option>
+</select>
+
+
+<h3>selected Country info:</h3>
+
+<table border="1" *ngIf="selectedCountry">
+
+    <tr>
+      <th>name</th>
+      <th>capital</th>
+      <th>population</th>
+      <th>borders</th>
+      <th>currencies</th>
+    </tr>
+  
+  
+    <tr>
+      <td>{{selectedCountry.name}}</td>
+      <td>{{selectedCountry.capital}}</td>
+      <td>{{selectedCountry.population}}</td>
+      <td>
+        <ul>
+          <li *ngFor="let b of selectedCountry.borders">{{b}}</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li *ngFor="let cr of selectedCountry.currencies">{{cr.name}} : {{cr.symbol}}</li>
+        </ul>
+      </td>
+    </tr>
+  
+  </table>

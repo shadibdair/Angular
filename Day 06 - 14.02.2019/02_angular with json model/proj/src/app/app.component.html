@@ -1,0 +1,37 @@
+<h1>Welcome to our user app</h1>
+
+
+<select [(ngModel)]="selectedUser" (change)="setUserAvatar(selectedUser)" >
+  <option *ngFor="let u of userList">{{u.first_name}}</option>
+</select>
+
+
+<div *ngIf="selectedUser">
+    <h2>Avatar of {{selectedUser}} :</h2> 
+    <img [src]="selectedAvatar"/>
+</div>
+
+
+<hr/>
+<button (click)="setOrderDec()">show in decrement order</button>
+<button (click)="setOrderInc()">show in increment order</button>
+<button (click)="setById(4,5)">show only 4-5</button>
+<button (click)="setById(5,6)">show only 5-6</button>
+<button (click)="setById(4,6)">show  4-6</button>
+
+<table border="1">
+  <tr>
+    <th>id</th>
+    <th>first_name</th>
+    <th>last_name</th>
+    <th>avatar</th>
+  </tr>
+
+
+  <tr *ngFor="let u of copyUserList">
+    <td>{{u.id}}</td>
+    <td>{{u.first_name}}</td>
+    <td>{{u.last_name}}</td>
+    <td><img [src]="u.avatar"/></td>
+  </tr>
+</table>
