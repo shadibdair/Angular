@@ -1,0 +1,57 @@
+<h1>Users app</h1>
+
+
+<h2>List of users</h2>
+<div *ngIf="myPersonService.myInfo">
+    <p>page: {{myPersonService.myInfo.page}}</p>
+    <p>per_page: {{myPersonService.myInfo.per_page}}</p>
+    <p>total: {{myPersonService.myInfo.total}}</p>
+    <p>total_pages: {{myPersonService.myInfo.total_pages}}</p>
+
+    <table border="1">
+
+        <tr>
+            <td>id</td>
+            <td>first_name </td>
+            <td>last_name </td>
+            <td>avatar</td>
+        </tr>
+
+        <tr *ngFor="let p of myPersonService.myInfo.data">
+            <td>{{p.id }}</td>
+            <td>{{p.first_name }}</td>
+            <td>{{p.last_name }}</td>
+            <td><img [src]="p.avatar" /></td>
+        </tr>
+    </table>
+</div>
+
+
+
+<h2>add user</h2>
+<label>name:</label>
+<input [(ngModel)]="newUser.name" />
+
+<label>job:</label>
+<input [(ngModel)]="newUser.job" />
+
+<button (click)="addUser()">add User</button>
+
+<div *ngIf="myPersonService.myAddInfo">
+    <p>id : {{myPersonService.myAddInfo.id}}</p>
+    <p>name: {{myPersonService.myAddInfo.name}}</p>
+    <p>job: {{myPersonService.myAddInfo.job}}</p>
+    <p>createdAt: {{myPersonService.myAddInfo.createdAt}}</p>
+</div>
+
+
+<h2>edit user</h2>
+<button (click)="editUser()">edit user</button>
+<div *ngIf="myPersonService.myPersonEdit">
+    <p>name: {{myPersonService.myPersonEdit.name}}</p>
+    <p>job: {{myPersonService.myPersonEdit.job}}</p>
+    <p>updatedAt: {{myPersonService.myPersonEdit.updatedAt}}</p>
+</div>
+
+<h2>delete user</h2>
+<button (click)="deleteUser()">delete User</button>
