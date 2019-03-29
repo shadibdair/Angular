@@ -1,0 +1,28 @@
+<table border="1">
+
+  <tr>
+    <th>name</th>
+    <th>capital</th>
+    <th>population</th>
+    <th>borders</th>
+    <th>currencies</th>
+  </tr>
+
+
+  <tr *ngFor="let c of myCountryService.countryList" (click)="setSelected(c.name)">
+    <td>{{c.name}}</td>
+    <td>{{c.capital}}</td>
+    <td>{{c.population}}</td>
+    <td>
+      <ul>
+        <li *ngFor="let b of c.borders">{{b}}</li>
+      </ul>
+    </td>
+    <td>
+      <ul>
+        <li *ngFor="let cr of c.currencies">{{cr.name}} : {{cr.symbol}}</li>
+      </ul>
+    </td>
+  </tr>
+
+</table>

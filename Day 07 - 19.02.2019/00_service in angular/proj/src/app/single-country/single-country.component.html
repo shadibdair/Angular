@@ -1,0 +1,30 @@
+<h3>selected Country info:</h3>
+
+<table border="1" *ngIf="myCountryService.selectedCountry">
+
+    <tr>
+      <th>name</th>
+      <th>capital</th>
+      <th>population</th>
+      <th>borders</th>
+      <th>currencies</th>
+    </tr>
+  
+  
+    <tr>
+      <td>{{myCountryService.selectedCountry.name}}</td>
+      <td>{{myCountryService.selectedCountry.capital}}</td>
+      <td>{{myCountryService.selectedCountry.population}}</td>
+      <td>
+        <ul>
+          <li *ngFor="let b of myCountryService.selectedCountry.borders">{{b}}</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li *ngFor="let cr of myCountryService.selectedCountry.currencies">{{cr.name}} : {{cr.symbol}}</li>
+        </ul>
+      </td>
+    </tr>
+  
+  </table>
