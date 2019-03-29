@@ -1,0 +1,24 @@
+
+<button (click)="setLink('contact')">contact</button>
+<button (click)="setLink('home')">home</button>
+<button (click)="setLink('products')">products</button>
+<hr/>
+
+<div *ngIf="myLink=='contact'" >
+    <app-contact></app-contact>
+</div>
+
+<div *ngIf="myLink=='home'" >
+    <app-home></app-home>
+</div>
+
+<div *ngIf="myLink=='products'" >
+    <app-products></app-products>
+</div>
+
+
+
+
+
+
+
