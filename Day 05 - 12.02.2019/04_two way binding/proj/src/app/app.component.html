@@ -1,0 +1,16 @@
+<h1>Enter your name</h1>
+
+<input type="text" 
+      (keyup)="setName($event.target.value)" 
+      [value]="firstName"/>
+
+<input type="number" [(ngModel)]="age"/>
+
+
+<p>Select your eye color:</p>
+<select [(ngModel)]="eyeColor">
+  <option>green</option>
+  <option>blue</option>
+</select>
+
+<h2>Hello dear {{firstName}}, you are {{age}} years old, and your eyes are {{eyeColor}}</h2>

@@ -1,0 +1,5 @@
+<button (click)="setChoice('summer')">summer</button>
+<button (click)="setChoice('winter')">winter</button>
+
+<img *ngIf="choice=='summer'" src="assets/images/summer.jpeg"/>
+<img *ngIf="choice=='winter'" src="assets/images/winter.jpeg"/>

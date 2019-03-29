@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    function showParam(p){
+        console.log(p.target.value);
+    }
+    
+    </script>
+<body>
+    <input onkeyup="showParam(event)"/>
+    <button onclick="showParam(event)">click me</button>
+</body>
+</html>
