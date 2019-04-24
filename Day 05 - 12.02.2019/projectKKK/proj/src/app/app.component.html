@@ -1,0 +1,17 @@
+
+
+<p *ngIf="bobIsMale">Bob is male</p>
+<p *ngIf="!bobIsMale">Bob is female</p>
+
+<h1>Part of the week</h1>
+<p *ngIf="dayOfWeek<=3">{{dayOfWeek}} is start of week</p>
+<p *ngIf="dayOfWeek>3 && dayOfWeek<=5">{{dayOfWeek}} is middle of week</p>
+<p *ngIf="dayOfWeek>5">{{dayOfWeek}} is end of week</p>
+
+<div *ngIf="student">
+    <h1>Student details</h1>
+    <p>age: {{student.age}}</p>
+    <p>age: {{student.name}}</p>
+</div>
+
+<button *ngIf="!student" (click)="initStudentInfo()">Init student details</button>
