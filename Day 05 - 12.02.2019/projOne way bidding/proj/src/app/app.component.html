@@ -1,0 +1,16 @@
+<!-- one way binding: TS to HTML -->
+<p [title]="firstName">firstName: {{firstName}}</p>
+<p *ngIf="counter">counter: {{counter}}</p>
+
+<ul>
+  <li *ngFor="let h of hobbies">{{h}}</li>
+</ul>
+
+<img src="assets\1434107181311774.jpg"/>
+
+<h1></h1> <!-- Like \n = new line-->
+
+<!-- one way binding: TS to HTML -->
+<button (click)="incrementNum()">
+  click me to increment counter
+</button>
